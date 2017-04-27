@@ -1,0 +1,8 @@
+When trying to get this running, I started running various versions of this scheme.
+
+For both normalizing flows and invertible neural nets, it looked like the optimization would blow up / become unstable during later stages of annealing (when the term involving the molecular mechanics potential was stronger).
+
+In the perturbed bimodal mixture example, I added a little bit of "offset" : moving one of the modes further from the origin than the other (see experiments/mixture_unevenness)
+This caused the variational approximation to completely "drop" the further mode...
+
+[to-do: check state of the art for addressing "mode-dropping" problem in these flexible variational inference schemes]
